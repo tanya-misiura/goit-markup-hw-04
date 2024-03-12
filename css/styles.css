@@ -4,7 +4,7 @@ body {
     background: #fff;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -107,10 +107,27 @@ img {
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:hover, .header-menu-link:focus {
     color: #404bbf;
+}
+
+.current {
+    position: relative;
+    color: #404bbf;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background: #404bbf;
 }
 
 .adress {
@@ -130,6 +147,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-link:hover,
@@ -143,6 +161,10 @@ img {
 
 .hero {
     background: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1440px 600px;
     padding-top: 188px;
     padding-bottom: 188px;
 }
@@ -242,7 +264,7 @@ img {
     background: #fff;
     border-radius: 0 0 4px 4px;
     width: 264px;
-    height: 380px;
+    height: 428px;
 }
 
 .team-item-picture {}
@@ -270,6 +292,31 @@ img {
     color: #434455;
 }
 
+.team-contact-link-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.team-contact-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-contact-link:hover {
+    background-color: #404bbf;;
+}
+
+.team-contact-icon {
+    fill: #f4f4fd;
+}
 /** ========================================== */
 
 /** ================PORTFOLIO================= */
@@ -353,6 +400,36 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+}
+
+.footer-contact-link-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.footer-link-text {
+}
+
+.footer-contact-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.footer-contact-link:hover {
+    background-color: #404bbf;
+}
+
+.footer-contact-icon {
+    fill: #f4f4fd;
 }
 
 /** ========================================== */
